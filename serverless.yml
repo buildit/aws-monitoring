@@ -11,7 +11,7 @@
 #
 # Happy Coding!
 
-service: aws-nodejs # NOTE: update this with your service name
+service: postToSlack # NOTE: update this with your service name
 
 # You can pin your service to only deploy with a specific Serverless version
 # Check out our docs for more details
@@ -20,7 +20,7 @@ service: aws-nodejs # NOTE: update this with your service name
 provider:
   name: aws
   runtime: nodejs6.10
-  region: eu-west-2
+  region: ${opt:region}
 
 # you can overwrite defaults here
 #  stage: dev
@@ -59,7 +59,7 @@ functions:
   postToSlack:
     handler: handler.postToSlack
     environment:
-      WEBHOOK_PATH: ${env:WEBHOOK_PATH}
+      WEBHOOK_PATH: ${opt:slack-webhook-path}
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details

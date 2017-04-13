@@ -6,4 +6,4 @@ This repo uses the [serverless](serverless.com) framework to create an AWS Lambd
 - `docker run -it sls-sns`
 - `aws configure`
 - `export WEBHOOK_PATH=${WEBHOOK_PATH}`
-- `sls deploy`
+- `sls deploy --region <deployment region> --slack-webhook-path <slack channel webhook uri>`

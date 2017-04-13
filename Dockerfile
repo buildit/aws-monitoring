@@ -1,6 +1,4 @@
 FROM mhart/alpine-node:6.10.2
-WORKDIR /src
-ADD . .
 RUN \
   mkdir -p /aws && \
   apk -Uuv add groff less python py-pip && \

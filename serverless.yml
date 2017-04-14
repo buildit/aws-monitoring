@@ -60,8 +60,8 @@ functions:
     handler: handler.postSnsMessage
     environment:
       WEBHOOK_PATH: ${opt:slack-webhook-path}
-  postCloudTrailEvent:
-    handler: handler.postCloudTrailEvent
+  postIfLargeEc2Instance:
+    handler: handler.postIfLargeEc2Instance
     environment:
       WEBHOOK_PATH: ${opt:slack-webhook-path}
 

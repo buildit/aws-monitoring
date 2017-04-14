@@ -13,4 +13,4 @@ Docker (clean) Development
 
 Testing
 -------
-- `sls invoke --function postSnsMessage --stage <stage> --path ./sns.json --region <region>`
+- `sls invoke --function postSnsMessage --stage <stage> --path ./sns-test-event.json --region <region>`

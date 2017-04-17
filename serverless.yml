@@ -64,7 +64,16 @@ functions:
     handler: handler.postIfLargeEc2Instance
     environment:
       WEBHOOK_PATH: ${opt:slack-webhook-path}
-
+    events:
+      - cloudwatchEvent:
+          event:
+            source:
+              - "aws.ec2"
+            detail-type:
+              - "AWS API Call via CloudTrail"
+            detail:
+              eventName:
+                - 'RunInstances'
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events

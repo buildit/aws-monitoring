@@ -15,6 +15,8 @@ and binding it to a pre-existing Lambda, check out the buildit/aws_management re
 
 Docker (cleanroom) Development
 --------------------------
+By using Docker we remove the need to install any global dependencies on the host. In this case NodeJS, the serverless NodeJS framework, and the AWS CLI.
+
 - `docker build --tag sls-sns .`
 - `docker run -itv <fully qualified path to this project on host>:/src sls-sns`
 - `aws configure`

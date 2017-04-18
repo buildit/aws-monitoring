@@ -35,7 +35,7 @@ Deployment
 Once you're convinced the CloudWatch Event rule(s) and Lambda(s) are working well together, you can run serverless commands
 un all regions (if you dare) by running the deployment script.
 
-- `./sls-everywhere.sh <deploy|remove|etc...>`
+- `./sls-everywhere.sh <deploy|remove|etc...> <slack-webhook-path>`
 
 To-Dos
 ------

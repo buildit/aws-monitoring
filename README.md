@@ -1,9 +1,10 @@
-# AWS Lambda to Slack
+# AWS Monitoring 
 
 This repo uses the [serverless](serverless.com) framework to create Lambda functions that can post to the #aws-alerts 
-Slack channel.
+Slack channel.  Specifically, the intention of this repo is to provide monitoring functionality to help us manage
+cost and security in AWs.
 
-There is a generic Lambda function that can be attached to SNS topics.
+There is a generic Lambda function that can be attached to any SNS topic.
 It will send the subject+message to the #aws-alerts channel.
 
 There is a very specific Lambda function that is attached to a CloudWatch Events rule (defined in-line), which
